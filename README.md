@@ -1,73 +1,91 @@
-# Wawa-Experimental-Configs
-This repository is for Wuthering waves experimental configs made by me
-
 # ⚙️ Experimental Config Collection (v2.7+)
 
-> Advanced Unreal Engine configuration presets designed for maximum Vulkan performance and feature stability across Exynos, MediaTek, and Universal Android platforms.
+> Advanced Unreal Engine 4/5 configuration presets tuned for **Vulkan API**, optimized per chipset architecture.  
+> Designed to push visual fidelity, reflection quality, and GPU efficiency without sacrificing stability.
+
+---
+
+## 🔵 Qualcomm Vulkan+ Performance Config
+
+### 📖 Description
+Optimized for **Qualcomm Snapdragon SoCs**, this config focuses on achieving the **highest frame stability** while maintaining crisp reflections and balanced GPU load under Vulkan.  
+Built to take full advantage of **Adreno GPU drivers**, async compute, and high clock retention.
+
+### 💡 Highlights
+- `r.GraphicsRHI=Vulkan` (enforced Vulkan rendering)  
+- Optimized **Adreno shader threading** for lower frame latency  
+- Increased **reflection and post-processing** accuracy  
+- Adaptive **thermal throttling guard** for sustained performance  
+- Calibrated **r.RenderTargetPoolMin** for better memory control  
+
+### ⚙️ Ideal For
+> Devices like LG V50S, Galaxy S21 FE Snapdragon, POCO F3, and most Snapdragon 8xx/7xx/6xx phones.
 
 ---
 
 ## 🔹 Exynos Vulkan-Forced Config
 
 ### 📖 Description
-This configuration is **fully Vulkan-enforced** and finely tuned for **Exynos chipsets** using **Mali GPUs**.  
-It maximizes reflection accuracy, shadow fidelity, and GPU thread balance, ensuring smooth performance under Vulkan rendering.
+This config enforces Vulkan rendering on **Exynos devices** using **Mali GPUs**, unlocking advanced reflection layers and smoother rendering transitions.  
+It minimizes driver overhead and improves synchronization between CPU and GPU threads.
 
 ### 💡 Highlights
-- **Vulkan API Forced:** `r.GraphicsRHI=Vulkan`
-- **Optimized for Mali GPUs** — stable frame pacing, reduced driver overhead  
-- **Enhanced reflections** with realistic specular detail  
-- **Balanced particle density** for foliage and effects  
-- **Thermal-aware tuning** for longer gaming sessions  
+- Vulkan API **forced** for all render paths  
+- Optimized **Mali GPU pipeline** with adjusted frame buffers  
+- Enhanced **reflections, shadows, and post effects**  
+- Balanced **particle draw distance** for realism and performance  
+- Reduced shader compilation stutter  
 
 ### ⚙️ Ideal For
-> Samsung Galaxy S, Note, and FE devices (Exynos variants)
+> Samsung Galaxy devices running Exynos 9611 / 9820 / 2100 / 2200 chipsets.
 
 ---
 
 ## 🔸 MediaTek Vulkan Config
 
 ### 📖 Description
-Built for **MediaTek SoCs**, this version ensures **consistent Vulkan stability** and **GPU optimization** for Mali-G and PowerVR architectures.  
-It prioritizes frame-time consistency and shader preloading efficiency.
+Specially crafted for **MediaTek chipsets** using **Mali-G and PowerVR GPUs**.  
+This config emphasizes stability, shader efficiency, and sustained Vulkan rendering performance.
 
 ### 💡 Highlights
-- Vulkan API enabled with low-latency driver scheduling  
-- **PowerVR-friendly texture streaming**  
-- Adjusted **render-thread prioritization** for hybrid core CPUs  
-- Slightly reduced post-processing for stability under thermal pressure  
-- Optimized particle behavior (leaves, smoke, debris)  
+- Vulkan API active by default  
+- Optimized **PowerVR and Mali-G threading**  
+- Lower **post-processing bias** to prevent heat spikes  
+- Consistent **frame-time handling** on hybrid CPUs  
+- Tuned **foliage and leaf particle system**  
 
 ### ⚙️ Ideal For
-> Devices powered by **Dimensity** or **Helio** chipsets (e.g., Infinix, Tecno, Redmi, Realme)
+> Dimensity 800–9000, Helio G95–G99, and similar MediaTek devices.
 
 ---
 
 ## ⚫ Universal Vulkan Config
 
 ### 📖 Description
-A **cross-platform config** designed for general Android Vulkan support.  
-This version merges the best of Exynos and MediaTek optimizations to ensure wide compatibility while keeping high-quality reflections, particles, and shadows intact.
+A general-purpose configuration that merges key optimizations from **Qualcomm**, **Exynos**, and **MediaTek**.  
+Designed for broad compatibility — a true “drop-in and go” Vulkan config.
 
 ### 💡 Highlights
-- **Universal Vulkan Enforcement**
-- Stable on **Snapdragon**, **Exynos**, and **MediaTek** devices  
-- **Balanced visuals + performance** (no chipset bias)  
-- **Reflection-ready foliage and lighting** enabled  
-- Unified scalability and particle tuning  
+- Auto Vulkan detection with `r.GraphicsRHI=Vulkan`  
+- Balanced **reflections, shadows, and particle load**  
+- Stable frame output across multiple GPU vendors  
+- Unified scalability and post-process tuning  
+- Perfect for testing across different hardware  
 
 ### ⚙️ Ideal For
-> Users seeking a single configuration for any Android UE game without chipset-specific edits
+> Any Android UE-based game, regardless of chipset.
 
 ---
 
 ## 🧱 Version Compatibility
-| Config Type | Vulkan Support | Version | Tested Devices |
-|--------------|----------------|----------|----------------|
+
+| Config Type | Vulkan Support | Version | Tested On |
+|--------------|----------------|----------|------------|
+| Qualcomm | ✅ Forced | v2.7+ | LG V50S, POCO F3, Galaxy S21 FE (Snapdragon) |
 | Exynos | ✅ Forced | v2.7+ | Galaxy S21 FE (Exynos 2100) |
-| MediaTek | ✅ Native | v2.7+ | Dimensity 8100, Helio G99 |
-| Universal | ✅ Auto | v2.7+ | Snapdragon 855+, Exynos, Dimensity |
+| MediaTek | ✅ Native | v2.7+ | Infinix Zero Ultra, Redmi Note 12 Pro+ |
+| Universal | ✅ Auto | v2.7+ | Any Vulkan-capable Android device |
 
 ---
 
-> 🧩 “Each config is experimental, tuned for the edge of Vulkan performance — not just visuals, but synergy between GPU, CPU, and thermal design.”
+> 🧩 “Every config is an experiment — where Vulkan meets precision, reflection meets performance, and your GPU gets to show off its true potential.”
