@@ -1,91 +1,76 @@
-# ⚙️ Experimental Config Collection (v2.7+)
+<!-- Banner -->
+<p align="center">
+  <img src="assets/banner.png" alt="Unreal Vulkan Config Banner" width="800"/>
+</p>
 
-> Advanced Unreal Engine 4/5 configuration presets tuned for **Vulkan API**, optimized per chipset architecture.  
-> Designed to push visual fidelity, reflection quality, and GPU efficiency without sacrificing stability.
-
----
-
-## 🔵 Qualcomm Vulkan+ Performance Config
-
-### 📖 Description
-Optimized for **Qualcomm Snapdragon SoCs**, this config focuses on achieving the **highest frame stability** while maintaining crisp reflections and balanced GPU load under Vulkan.  
-Built to take full advantage of **Adreno GPU drivers**, async compute, and high clock retention.
-
-### 💡 Highlights
-- `r.GraphicsRHI=Vulkan` (enforced Vulkan rendering)  
-- Optimized **Adreno shader threading** for lower frame latency  
-- Increased **reflection and post-processing** accuracy  
-- Adaptive **thermal throttling guard** for sustained performance  
-- Calibrated **r.RenderTargetPoolMin** for better memory control  
-
-### ⚙️ Ideal For
-> Devices like LG V50S, Galaxy S21 FE Snapdragon, POCO F3, and most Snapdragon 8xx/7xx/6xx phones.
+<h1 align="center">⚙️ Unreal Engine Vulkan Config Collection (v2.7+)</h1>
+<p align="center">
+  <em>Experimental configurations tuned for Vulkan API performance, reflection quality, and smooth gameplay across major Android chipsets.</em>
+</p>
 
 ---
 
-## 🔹 Exynos Vulkan-Forced Config
-
-### 📖 Description
-This config enforces Vulkan rendering on **Exynos devices** using **Mali GPUs**, unlocking advanced reflection layers and smoother rendering transitions.  
-It minimizes driver overhead and improves synchronization between CPU and GPU threads.
-
-### 💡 Highlights
-- Vulkan API **forced** for all render paths  
-- Optimized **Mali GPU pipeline** with adjusted frame buffers  
-- Enhanced **reflections, shadows, and post effects**  
-- Balanced **particle draw distance** for realism and performance  
-- Reduced shader compilation stutter  
-
-### ⚙️ Ideal For
-> Samsung Galaxy devices running Exynos 9611 / 9820 / 2100 / 2200 chipsets.
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/API-Vulkan-blue?style=for-the-badge&logo=vulkan" alt="Vulkan API"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Status-Experimental-orange?style=for-the-badge" alt="Status"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Version-v2.7%2B-success?style=for-the-badge" alt="Version"></a>
+</p>
 
 ---
 
-## 🔸 MediaTek Vulkan Config
-
-### 📖 Description
-Specially crafted for **MediaTek chipsets** using **Mali-G and PowerVR GPUs**.  
-This config emphasizes stability, shader efficiency, and sustained Vulkan rendering performance.
-
-### 💡 Highlights
-- Vulkan API active by default  
-- Optimized **PowerVR and Mali-G threading**  
-- Lower **post-processing bias** to prevent heat spikes  
-- Consistent **frame-time handling** on hybrid CPUs  
-- Tuned **foliage and leaf particle system**  
-
-### ⚙️ Ideal For
-> Dimensity 800–9000, Helio G95–G99, and similar MediaTek devices.
+## 🌍 Overview
+These configs fine-tune Unreal Engine rendering for Vulkan-capable Android devices — pushing higher reflections, better shadow accuracy, and GPU-optimized thread handling.  
+Each config is customized per chipset to get the most stable performance possible without losing that high-fidelity look.
 
 ---
 
-## ⚫ Universal Vulkan Config
+## 🧩 Configurations
 
-### 📖 Description
-A general-purpose configuration that merges key optimizations from **Qualcomm**, **Exynos**, and **MediaTek**.  
-Designed for broad compatibility — a true “drop-in and go” Vulkan config.
-
-### 💡 Highlights
-- Auto Vulkan detection with `r.GraphicsRHI=Vulkan`  
-- Balanced **reflections, shadows, and particle load**  
-- Stable frame output across multiple GPU vendors  
-- Unified scalability and post-process tuning  
-- Perfect for testing across different hardware  
-
-### ⚙️ Ideal For
-> Any Android UE-based game, regardless of chipset.
+| Chipset | Folder | Vulkan Support | Description |
+|----------|---------|----------------|--------------|
+| 🔵 Qualcomm | [`Qualcomm/`](./Qualcomm) | ✅ Forced | Optimized for **Adreno GPUs** — high FPS & stable reflections |
+| 🔹 Exynos | [`Exynos/`](./Exynos) | ✅ Forced | Refined Vulkan config for **Mali GPUs** — clean lighting, minimal stutter |
+| 🔸 MediaTek | [`MediaTek/`](./MediaTek) | ✅ Native | Stable Vulkan config for **Dimensity / Helio** chips |
+| ⚫ Universal | [`Universal/`](./Universal) | ✅ Auto | Balanced setup for all Vulkan-supported devices |
 
 ---
 
-## 🧱 Version Compatibility
+## ⚠️ Warnings
 
-| Config Type | Vulkan Support | Version | Tested On |
-|--------------|----------------|----------|------------|
-| Qualcomm | ✅ Forced | v2.7+ | LG V50S, POCO F3, Galaxy S21 FE (Snapdragon) |
-| Exynos | ✅ Forced | v2.7+ | Galaxy S21 FE (Exynos 2100) |
-| MediaTek | ✅ Native | v2.7+ | Infinix Zero Ultra, Redmi Note 12 Pro+ |
-| Universal | ✅ Auto | v2.7+ | Any Vulkan-capable Android device |
+> ⚠️ **Always back up** your existing config files before replacing them.  
+> These are *experimental configs* that can cause issues if your device or UE version handles Vulkan differently.
+
+**Backup Path Example:**
+
+Android/data/<game_package>/files/UE4Game/<GameName>/Saved/Config/Android/
 
 ---
 
-> 🧩 “Every config is an experiment — where Vulkan meets precision, reflection meets performance, and your GPU gets to show off its true potential.”
+## 💡 Tips
+- Use **Performance Mode** before launching the game.  
+- If the game fails to boot, delete the `.ini` and restore your backup.  
+- Pair Vulkan configs with proper **thermal management apps** for best stability.  
+- Ideal for testing in **Wuthering Waves**, **Tower of Fantasy**, **PUBG UE**, and other Vulkan-based titles.
+
+---
+
+## 🧱 Folder Layout
+
+📦 Unreal-Vulkan-Configs ┣ 📂 Qualcomm ┣ 📂 Exynos ┣ 📂 MediaTek ┣ 📂 Universal ┗ 📜 README.md
+
+---
+
+## 🧠 Version Info
+- **Engine:** Unreal Engine 4 / 5  
+- **API:** Vulkan  
+- **Config Version:** v2.7  
+- **Status:** Experimental  
+- **Last Updated:** 2025-10-29  
+
+---
+
+## 👤 Credits
+Created by **Nel**  
+Inspired by **Kuro’s Config Type (v2.7+)** and the **LG V50S Experimental Config Project**
+
+> 🧩 “Vulkan runs deep — reflections, frames, and the fire beneath your GPU.”
