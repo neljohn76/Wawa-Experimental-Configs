@@ -42,7 +42,7 @@ Each config is customized per chipset to get the most stable performance possibl
 
 **Backup Path Example:**
 
-Android/data/<game_package>/files/UE4Game/<GameName>/Saved/Config/Android/
+Android/data/com.kurogame.wutheringwaves/files/UE4Game/Client/Client/Saved/Config/Android/
 
 ---
 
