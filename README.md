@@ -54,12 +54,6 @@ Android/data/<game_package>/files/UE4Game/<GameName>/Saved/Config/Android/
 
 ---
 
-## 🧱 Folder Layout
-
-📦 Unreal-Vulkan-Configs ┣ 📂 Qualcomm ┣ 📂 Exynos ┣ 📂 MediaTek ┣ 📂 Universal ┗ 📜 README.md
-
----
-
 ## 🧠 Version Info
 - **Engine:** Unreal Engine 4 / 5  
 - **API:** Vulkan  
