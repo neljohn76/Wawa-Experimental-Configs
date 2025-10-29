@@ -28,9 +28,9 @@ Each config is customized per chipset to get the most stable performance possibl
 
 | Chipset | Folder | Vulkan Support | Description |
 |----------|---------|----------------|--------------|
-| 🔵 Qualcomm | [`Qualcomm/`](./Qualcomm) | ✅ Forced | Optimized for **Adreno GPUs** — high FPS & stable reflections |
-| 🔹 Exynos | [`Exynos/`](./Exynos) | ✅ Forced | Refined Vulkan config for **Mali GPUs** — clean lighting, minimal stutter |
-| 🔸 MediaTek | [`MediaTek/`](./MediaTek) | ✅ Native | Stable Vulkan config for **Dimensity / Helio** chips |
+| 🔵 Qualcomm | [`Qualcomm/`](./(Qualcomm)Ultra Config Wuwa with Entity Leaves) | ✅ Forced | Optimized for **Adreno GPUs** — high FPS & stable reflections |
+| 🔹 Exynos | [`Exynos/`](./(Exynos)Ultra Config Wuwa with Entity Leaves) | ✅ Forced | Refined Vulkan config for **Mali GPUs** — clean lighting, minimal stutter |
+| 🔸 MediaTek | [`MediaTek/`](./(MediaTek)Ultra Config Wuwa with Entity Leaves) | ✅ Native | Stable Vulkan config for **Dimensity / Helio** chips |
 | ⚫ Universal | [`Universal/`](./Universal) | ✅ Auto | Balanced setup for all Vulkan-supported devices |
 
 ---
