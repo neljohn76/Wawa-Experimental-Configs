@@ -3,7 +3,7 @@
   <img src="assets/banner.png" alt="Unreal Vulkan Config Banner" width="800"/>
 </p>
 
-<h1 align="center">⚙️ Unreal Engine Vulkan Config Collection (v2.7+)</h1>
+<h1 align="center">⚙️ UE4 Wuthering Waves Vulkan Config Collection (v2.7+)</h1>
 <p align="center">
   <em>Experimental configurations tuned for Vulkan API performance, reflection quality, and smooth gameplay across major Android chipsets.</em>
 </p>
